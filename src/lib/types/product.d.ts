@@ -15,5 +15,5 @@ declare interface Product extends DatabaseProperties {
   sold: number;
   rateAvg: number;
   rateCount: number;
-  id: number;
+  id: string;
 }

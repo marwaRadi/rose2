@@ -82,25 +82,54 @@
 
   --color-shadow:rgba(248,43,169,0.1);
 
-  --color-black-8:rgba(0,0,0,0.8)
+  --color-black-8:rgba(0,0,0,0.8);
 
+  --headingFont:'Roboto', sans-serif;
+  --textFont: 'Inter', sans-serif;
   
  }
-:root{
+/* adding base styles */
+ @layer base{
+h1 , h2 , h3 , h4 , h5 , h6 {
+font-family: var(--headingFont);
+font-weight: 700;
+text-transform: capitalize;
+};
+p{
+font-family: var(--textFont);
+};
+h4{
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--color-primary-dark);
+text-transform: uppercase;
+};
+h2{
+  font-size: clamp(1.25rem,3vw,2rem);
+};
+p{
+  font-size: 12px;
+  color: var(--color-muted-text);
+};
+ }
+
+ @layer components{
+.main-rounded{
+  @apply rounded-3xl
+}
+.background-light{
+  background-color: var(--color-primary-light-90);
+}
+ }
+/* :root{
   --headingFont:'Roboto', sans-serif;
   --textFont: 'Inter', sans-serif;
 }
-*{
-  box-sizing: border-box;
-}
-h1,h2,h3,h4,h5,h6,a{
-  font-family: var(--headingFont);
-}
+ */
 
-p{
-  font-family: var(--textFont);
-  color: var(--color-muted-text);
-}
+
+
+
 
 @custom-variant dark (&:is(.dark *));
 

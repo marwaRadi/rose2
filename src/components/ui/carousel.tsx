@@ -132,13 +132,17 @@ function Carousel({
   )
 }
 
-function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
-  const { carouselRef, orientation } = useCarousel()
+function CarouselContent({
+  className,
+
+  ...props
+}: React.ComponentProps<"div">) {
+  const { carouselRef, orientation } = useCarousel();
 
   return (
     <div
       ref={carouselRef}
-      className="overflow-hidden"
+      className={`overflow-hidden h-full `}
       data-slot="carousel-content"
     >
       <div
@@ -150,7 +154,7 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
         {...props}
       />
     </div>
-  )
+  );
 }
 
 function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
@@ -186,7 +190,9 @@ function CarouselPrevious({
       size={size}
       className={cn(
         "absolute size-8 rounded-full",
-        orientation === "horizontal"
+        className
+          ? className
+          : orientation === "horizontal"
           ? "top-1/2 -left-12 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
@@ -198,7 +204,7 @@ function CarouselPrevious({
       <ArrowLeft />
       <span className="sr-only">Previous slide</span>
     </Button>
-  )
+  );
 }
 
 function CarouselNext({
@@ -216,7 +222,9 @@ function CarouselNext({
       size={size}
       className={cn(
         "absolute size-8 rounded-full",
-        orientation === "horizontal"
+        className
+          ? className
+          : orientation === "horizontal"
           ? "top-1/2 -right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
@@ -228,7 +236,7 @@ function CarouselNext({
       <ArrowRight />
       <span className="sr-only">Next slide</span>
     </Button>
-  )
+  );
 }
 
 export {

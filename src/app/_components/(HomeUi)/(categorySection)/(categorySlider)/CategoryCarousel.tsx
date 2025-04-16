@@ -1,11 +1,13 @@
 "use client";
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+
+
 import CategoryCard from "./CategoryCard";
-import useAutoPlayCarousel from "@/hooks/useAutoPlayCarousel";
 
 const categories = [
   {
@@ -111,29 +113,39 @@ const categories = [
 ];
 
 export function CategoryCarousel() {
-  const plugin = useAutoPlayCarousel();
   return (
-    <Carousel
-      className="mb-6"
-      onMouseEnter={plugin.current?.stop}
-      onMouseLeave={() => plugin.current?.play()}
-      plugins={[plugin.current]}
-      opts={{
-        align: "start",
+    // <div className=" snap-x overflow-x-auto -ml-4 scroll-smooth  whitespace-nowrap flex ">
+    //   {categories.map((category) => (
+    //     <div
+    //       className=" flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 pl-4  snap-start"
+    //       onMouseDown={handleScroll}
+    //       key={category._id}
+    //     >
+    //       {" "}
+    //       <CategoryCard category={category} />
+    //     </div>
+    //   ))}
+    // </div>
+    <div className="mb-6">
+      <Carousel opts={{
+        align: "center",
         loop: true,
+        
       }}
-    >
-      <CarouselContent className="-ml-6">
-        {categories.map((category) => (
-          <CarouselItem
-            key={category._id}
-            className="basis-1/2 md:basis-1/3  lg:basis-1/5 pl-6 "
-          >
-            <CategoryCard category={category} />
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-    </Carousel>
+      className=" cursor-grab active:cursor-grabbing"
+      >
+        <CarouselContent>
+          {categories.map((category) => (
+            <CarouselItem
+              key={category._id}
+              className="basis-1/2 md:basis-1/3 lg:basis-1/5 "
+            >
+              <CategoryCard category={category} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+    </div>
   );
 }
 

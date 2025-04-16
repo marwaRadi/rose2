@@ -13,7 +13,7 @@ function PrimaryBtn({ children, style = "", paddingVertical, paddingHorizontal ,
   ${rounded ? rounded : "rounded-[10px]"}
    ${paddingVertical ? paddingVertical : "py-2"} ${
         paddingHorizontal ? paddingHorizontal : "px-4"
-      } w-fit inline-block text-sm bg-primary-dark text-white hover:bg-primary-light-10 transition-colors cursor-pointer`}
+      } w-fit inline-block capitalize bg-primary-dark text-sm text-white hover:bg-primary-light-10 transition-colors cursor-pointer`}
     >
       {children}
     </button>

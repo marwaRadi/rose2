@@ -1,3 +1,4 @@
+import Test from "./components/Test";
 import { getMetadata } from "../../../_utils/getMetadata";
 
 export const metadata = getMetadata(
@@ -6,7 +7,8 @@ export const metadata = getMetadata(
 );
 
 function page() {
-  return <div>category page</div>;
+
+ return <Test/>
 }
 
 export default page;

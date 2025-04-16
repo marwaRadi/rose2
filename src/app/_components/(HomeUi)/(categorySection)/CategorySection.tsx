@@ -1,5 +1,5 @@
 import CategoryCarousel from "./(categorySlider)/CategoryCarousel";
-import GiftOffers from "./(giftOffers)/GiftOffers";
+import BannerPromotion from "./banner-promotion/BannerPromotion";
 
 function CategorySection() {
   // const categories= [
@@ -98,9 +98,7 @@ function CategorySection() {
     <div className=" container mx-auto">
       <main className=" px-4 2xl:px-20  mt-4 mb-6">
         <CategoryCarousel />
-        <GiftOffers />
-
-        
+        <BannerPromotion/>
       </main>
     </div>
   );
