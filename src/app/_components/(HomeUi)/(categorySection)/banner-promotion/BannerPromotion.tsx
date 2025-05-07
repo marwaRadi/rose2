@@ -7,11 +7,11 @@ import promImageThree from "@/../public/gifts-background/Top view hand holding g
 import promImageFour from "@/../public/gifts-background/Christmas shopping-composition-with-presents-and-cart-main.png";
 function BannerPromotion() {
   return (
-    <div className=" grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+    <div className=" grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 ">
       <PromotionImage
         img={promImageOne}
         textPosition="left"
-        imageStyle="h-full"
+        imageStyle="h-full "
       >
         <>
           <h4 className="text-base text-primary-dark tracking-[4px] ">

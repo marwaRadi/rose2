@@ -1,5 +1,6 @@
 import PrimaryBtn from "@/components/common/buttons/PrimaryBtn";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 function SliderContent() {
   return (
     <div className=" capitalize space-y-4 p-4 flex flex-col justify-center  h-full">
@@ -8,13 +9,16 @@ function SliderContent() {
         Choose Perfect <br /> <span className="text-primary-dark">Gifts </span>
         From Us
       </h2>
-      <p className=" w-1/2">
+      <p className=" sm:w-1/2 w-[70%]">
         Culpa ducimus nesciunt aliquam non rerum esse recusandae omnis. Rerum
         optio dolores et.
       </p>
-      <PrimaryBtn>
+      <Link href="/category">
+          <PrimaryBtn>
         Shop Now <ArrowRight className="inline-block" />
       </PrimaryBtn>
+      </Link>
+    
     </div>
   );
 }

@@ -22,8 +22,32 @@ function PromotionImages({
     left: " left-0 ",
     right: `right-0 `,
   };
+  // return (
+  //   <div className="relative">
+  //     <div className={`relative ${style ? style : ""} bg-teal-500 aspect-square`}>
+      
+  //     <Image
+  //       fill
+  //       src={img}
+  //       alt="promotion-1"
+  //       className={`main-rounded ${imageStyle ? imageStyle : ""} object-cover`}
+  //     />
+     
+  //     </div>
+  //      <div
+  //       className={`absolute ${
+  //         myStyle[textPosition as keyof typeof myStyle]
+  //       } top-1/2 w-full transform  -translate-y-1/2  space-y-4 px-4`}
+  //     >
+  //       {children}
+  //     </div>
+  //   </div>
+    
+  // );
+
+
   return (
-    <figure className={`relative ${style ? style : ""}`}>
+    <figure className={`relative ${style ? style : ""} `}>
       <Image
         src={img}
         alt="promotion-1"
@@ -41,3 +65,19 @@ function PromotionImages({
 }
 
 export default PromotionImages;
+
+
+  // <figure className={`relative ${style ? style : ""} bg-teal-500`}>
+  //   <Image
+  //     src={img}
+  //     alt="promotion-1"
+  //     className={`main-rounded ${imageStyle ? imageStyle : ""}`}
+  //   />
+  //   <figcaption
+  //     className={`absolute ${
+  //       myStyle[textPosition as keyof typeof myStyle]
+  //     } top-1/2 w-full transform  -translate-y-1/2  space-y-4 px-4`}
+  //   >
+  //     {children}
+  //   </figcaption>
+  // </figure>;
