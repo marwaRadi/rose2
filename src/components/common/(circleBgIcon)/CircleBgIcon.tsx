@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode } from "react";
 
 type CircleBgIconProp = {
@@ -25,7 +26,7 @@ function CircleBgIcon({
       ${padding ? padding : " p-5"} 
       ${border ? border : ""}
       w-fit
-      rounded-full inline-block  text-white bg-primary-dark `}
+      rounded-full inline-block  text-white bg-primary-dark  `}
     >
       {children}
     </span>

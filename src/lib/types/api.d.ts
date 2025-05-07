@@ -7,10 +7,11 @@ declare type SuccessfulResponse<T> = {
   message: "success";
 } & T;
 
-declare type ErrorResponse = {
-  message: string;
-};
 
+declare type ErrorResponse = {
+  message?: string;
+  error?:string
+}
 declare type APIResponse<T> = SuccessfulResponse<T> | ErrorResponse;
 
 declare type Metadata = {
@@ -24,3 +25,7 @@ declare type PaginatedResponse<T> = {
   [key: string]: T;
   metadata: Metadata;
 };
+
+
+// all products
+ 

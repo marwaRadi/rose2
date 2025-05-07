@@ -17,3 +17,4 @@ declare interface Product extends DatabaseProperties {
   rateCount: number;
   id: string;
 }
+

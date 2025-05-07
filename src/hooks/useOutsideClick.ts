@@ -2,17 +2,18 @@ import { useEffect, useRef } from "react";
 
 function useOutsideClick(close: () => void) {
   const ref = useRef<HTMLDivElement>(null);
+  const overLayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function handleCloseWindow(e: MouseEvent) {
       if (ref &&  !ref.current?.contains(e.target as Node)) close();
     }
-    document.addEventListener("click", handleCloseWindow);
+    window.addEventListener("click", handleCloseWindow);
 
-    return () => document.removeEventListener("click", handleCloseWindow);
-  }, [close]);
+    return () => window.removeEventListener("click", handleCloseWindow);
+  }, [close ]);
 
-  return ref;
+  return {ref , overLayRef};
 }
 
 export default useOutsideClick;

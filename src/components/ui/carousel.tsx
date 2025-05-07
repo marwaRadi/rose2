@@ -142,7 +142,7 @@ function CarouselContent({
   return (
     <div
       ref={carouselRef}
-      className={`overflow-hidden h-full `}
+      className={`${className ? className : ""} overflow-hidden  `}
       data-slot="carousel-content"
     >
       <div
@@ -195,7 +195,6 @@ function CarouselPrevious({
           : orientation === "horizontal"
           ? "top-1/2 -left-12 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
-        className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
@@ -214,7 +213,6 @@ function CarouselNext({
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
-
   return (
     <Button
       data-slot="carousel-next"

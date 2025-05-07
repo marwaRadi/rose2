@@ -1,4 +1,6 @@
 import { getMetadata } from "@/_utils/getMetadata";
+import LoadingSpinner from "@/components/common/spinner/LoadingSpinner";
+import { Suspense } from "react";
 
 export const metadata = getMetadata(
   "Favorite",
@@ -6,7 +8,11 @@ export const metadata = getMetadata(
 );
 
 function page() {
-  return <div>favorite page</div>;
+  return (
+    <Suspense fallback={<LoadingSpinner />}>
+      <div>favorite page</div>;
+    </Suspense>
+  );
 }
 
 export default page;

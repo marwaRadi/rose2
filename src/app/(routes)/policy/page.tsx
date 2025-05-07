@@ -1,6 +1,8 @@
 // import type { Metadata } from "next";
 
+import { Suspense } from "react";
 import { getMetadata } from "../../../_utils/getMetadata";
+import LoadingSpinner from "@/components/common/spinner/LoadingSpinner";
 // import { Metadata } from "next";
 
 // export const metadata: Metadata = {
@@ -14,7 +16,11 @@ export const metadata = getMetadata(
 );
 
 function page() {
-  return <div>policy</div>;
+  return (
+    <Suspense fallback={<LoadingSpinner />}>
+      <div>policy</div>;
+    </Suspense>
+  ); 
 }
 
 export default page;

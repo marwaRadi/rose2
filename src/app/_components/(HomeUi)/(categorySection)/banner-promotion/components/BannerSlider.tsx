@@ -36,8 +36,8 @@ function BannerSlider({ style }: { style?: string }) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="right-[15%] bottom-6 cursor-pointer" />
-        <CarouselNext className="right-[4%] sm:right-[9%] bottom-6 cursor-pointer" />
+        <CarouselPrevious className="right-[15%] bottom-6 cursor-pointer disabled:cursor-not-allowed" />
+        <CarouselNext className="right-[4%] sm:right-[9%] bottom-6 cursor-pointer disabled:cursor-not-allowed" />
       </Carousel>
     </div>
   );
