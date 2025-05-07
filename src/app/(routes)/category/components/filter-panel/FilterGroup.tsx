@@ -20,7 +20,7 @@ function FilterGroup({
 
   return (
     // header
-    <div className="p-6  relative w-fit md:w-full">
+    <div className="p-6 sm:relative   w-fit md:w-full ">
       <div
         className={`flex gap-2 cursor-pointer  ${
           openList === title ? "!text-primary-dark" : "text-heading"
@@ -31,7 +31,7 @@ function FilterGroup({
         }}
       >
         <p
-          className={` font-bold text-base capitalize ${
+          className={` font-bold md:text-base text-sm capitalize ${
             openList === title ? "text-primary-dark" : "text-heading"
           }`}
         >
@@ -58,7 +58,7 @@ function FilterGroup({
           {(isDesktop || openList === title) && (
             <motion.div
               layout
-              className="  absolute md:static  p-6 shadow-md  bg-white z-10 w-[300px] md:w-full shadow-shadow"
+              className="  absolute md:static left-0  p-6 shadow-md  bg-white z-10 w-[300px] md:w-full shadow-shadow"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 100 }}

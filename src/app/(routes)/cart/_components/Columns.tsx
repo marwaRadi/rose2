@@ -93,6 +93,7 @@ export const columns: ColumnDef<Cart>[] = [
     cell: ({ row }) => {
       const item = row.original;
       return <DeleteBtn id={item.id} key={item.id} />;
+      
     },
   },
 ];

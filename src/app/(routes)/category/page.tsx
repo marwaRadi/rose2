@@ -19,7 +19,7 @@ export default async function Page({
     <div className="fixed-size">
       
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:grid-cols-4 ">
-        <div className="col-span-1">
+        <div className="md:col-span-1">
           <FilterPanel />
         </div>
         <div className=" md:col-span-2 lg:col-span-3">

@@ -31,7 +31,7 @@ function FilterPanel() {
     setOpenList((list) => (list === listName ? null : listName));
   }
   return (
-    <div className=" flex gap-2 md:flex-col ">
+    <div className=" flex gap-2 md:flex-col flex-wrap  relative">
       {/* categories */}
       <FilterGroup
         title="categories"
