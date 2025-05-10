@@ -1,3 +1,4 @@
+import ProtectedRoute from "@/components/protected-route/ProtectedRoute";
 import { getMetadata } from "../../../_utils/getMetadata";
 
 export const metadata = getMetadata(
@@ -6,7 +7,8 @@ export const metadata = getMetadata(
 );
 
 function page() {
-  return <div>checkout page</div>;
+  
+  return <div><ProtectedRoute> checkout</ProtectedRoute></div>;
 }
 
 export default page;

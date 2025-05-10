@@ -1,5 +1,6 @@
 import { getMetadata } from "@/_utils/getMetadata";
 import LoadingSpinner from "@/components/common/spinner/LoadingSpinner";
+import ProtectedRoute from "@/components/protected-route/ProtectedRoute";
 import { Suspense } from "react";
 
 export const metadata = getMetadata(
@@ -10,7 +11,9 @@ export const metadata = getMetadata(
 function page() {
   return (
     <Suspense fallback={<LoadingSpinner />}>
-      <div>favorite page</div>;
+      <ProtectedRoute>
+        <div>favorite page</div>;
+      </ProtectedRoute>
     </Suspense>
   );
 }
