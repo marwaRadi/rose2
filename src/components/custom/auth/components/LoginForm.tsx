@@ -8,6 +8,7 @@ import LoadingButton from "@/components/common/animation/LoadingButton";
 import { signIn } from "next-auth/react";
 import { successToast } from "@/lib/utils/successToast";
 import { useRouter } from "next/navigation";
+import { ErrorToast } from "@/lib/utils/ErrorToast";
 type LoginProps = {
   setView: React.Dispatch<React.SetStateAction<Views>>;
   setOpenModal: React.Dispatch<React.SetStateAction<string>>;
@@ -18,21 +19,25 @@ function LoginForm({ setView, setOpenModal }: LoginProps) {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors, isValid, isSubmitting },
   } = useForm<LoginSchema>({ resolver: zodResolver(loginSchema) });
   const router = useRouter();
-
   //=======================================================================
   //functions
   const onSubmit: SubmitHandler<LoginSchema> = async (data) => {
-    console.log(data);
     const res = await signIn("credentials", { ...data, redirect: false });
     if (!res?.error) {
       successToast("logged in successfully");
-       router.refresh();
+      router.refresh();
       setOpenModal("");
-     
+    } else {
+      if (res.error === "CredentialsSignin") {
+        setError("password", { message: "invalid email or password" });
+      }
+      ErrorToast(res.error);
     }
+    console.log("res", res);
   };
   return (
     <div className="  flex flex-col gap-[32px]">
