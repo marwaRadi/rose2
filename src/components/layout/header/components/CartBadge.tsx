@@ -16,7 +16,7 @@ function CartBadge() {
   useEffect(() => {
     async function fetchCart() {
       try {
-        const res = await fetch(`http://localhost:3000/api/cart/get`, {
+        const res = await fetch(`/api/cart/get`, {
           headers: {
             Authorization: `Bearer ${data?.token}`,
           },
