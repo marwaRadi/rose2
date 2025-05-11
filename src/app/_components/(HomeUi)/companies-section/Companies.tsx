@@ -11,7 +11,7 @@ const companies = [companyOne, companyTwo, companyThree, companyFour, companyFiv
 
 function Companies() {
   return (
-    <div className="bg-primary-light-90 fixed-size space-y-8 py-10">
+    <section className="bg-primary-light-90 fixed-size space-y-8 py-10">
       <h2 className="text-center ">
         <span className="border-b-2 border-primary-dark">Trusted by </span> over
         <span className="text-primary-dark mx-2 ">4.5k+</span> companies
@@ -28,7 +28,7 @@ function Companies() {
           View All Brands <ArrowRight className="inline-block" />
         </PrimaryBtn>
       </div>
-    </div>
+    </section>
   );
 }
 

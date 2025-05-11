@@ -18,7 +18,7 @@ async function BestSeller() {
   if (bestSeller?.length === 0) return null;
 
   return (
-    <div className=" fixed-size ">
+    <section className=" fixed-size ">
       <div className="grid   grid-cols-1 sm:grid-cols-2 xl:grid-cols-3  gap-6 ">
         {/* right side => content */}
         <BestSellerContent styling="" />
@@ -38,7 +38,7 @@ async function BestSeller() {
           <CarouselNext className="bg-primary-dark text-white hover:bg-primary-light-10 hover:text-white  right-0 top-[40%] sm:top-[35%] lg:top-[30%] xl:top-[35%] " />
         </Carousel>
       </div>
-    </div>
+    </section>
   );
 }
 

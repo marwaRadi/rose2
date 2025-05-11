@@ -34,7 +34,7 @@ export default function RootLayout({
         <body className={`${inter.className} text-heading  antialiased `}>
           <Providers>
             <Header />
-            <main className="mt-[110px] mt-[140px]">{children}</main>
+            <main className="mt-[110px] lg:mt-[140px]">{children}</main>
 
             <FormModal />
             <Toaster

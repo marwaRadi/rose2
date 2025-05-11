@@ -150,6 +150,9 @@ button{
 box-shadow: 0px 4px 5px -1px rgba(219,61,128,0.12);
 
 };
+.nav-border{
+  @apply border-b-2 border-gray-200/40
+};
  };
 /* :root{
   --headingFont:'Roboto', sans-serif;

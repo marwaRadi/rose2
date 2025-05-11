@@ -18,7 +18,6 @@ function DeleteBtn({ id }: { id: string }) {
   async function handleDelete(id: string) {
     setIsDeleting(true);
     const payload = await deleteFromCart(id);
-
     if (payload && "cart" in payload && payload.message === "success") {
       successToast("product deleted successfully");
       getCurrentCartProducts(payload.numOfCartItems);

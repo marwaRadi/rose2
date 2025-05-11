@@ -7,7 +7,7 @@ import giftFour from "@/../public/gifts-background/gallery/gift-4.png";
 import giftFive from "@/../public/gifts-background/gallery/gift-5.png";
 function Gallery() {
   return (
-    <div className="fixed-size">
+    <section className="fixed-size">
        {/* gallery */}
       <div className=" my-20 px-4">
         {/* title */}
@@ -71,7 +71,7 @@ function Gallery() {
           </div>
         </div>
       </div>
-      </div>
+      </section>
   )
 }
 

@@ -39,9 +39,9 @@ async function HeaderIcons() {
         </svg>
       </Link>
 
-    {/* cart badge  */}
-      <CartBadge/>
-      <Link href={"/profile"}>
+      {/* cart badge  */}
+      <CartBadge />
+      <Link href={"/account"}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

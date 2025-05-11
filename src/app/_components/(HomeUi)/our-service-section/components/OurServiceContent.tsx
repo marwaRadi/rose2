@@ -2,7 +2,7 @@ import CircleBgIcon from "@/components/common/(circleBgIcon)/CircleBgIcon";
 import {services} from '../data/serviceData'
 function OurServiceContent() {
   return (
-    <div className="background-light p-10  md:my-20 my-6  ">
+    <section className="background-light p-10  md:my-20 my-6  ">
       <div className="fixed-size !mb-0 grid grid-cols-1 gap-8 items-center sm:grid-cols-2 md:justify-between md:grid-cols-4">
         {services.map((item) => (
           <div
@@ -19,7 +19,7 @@ function OurServiceContent() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

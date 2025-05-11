@@ -42,8 +42,7 @@ export const authOptions: NextAuthOptions = {
           //   maxAge: 60 * 60 * 24 * 7,
           //   sameSite: "strict",
           // });
-
-
+console.log(user.token)
           return { ...user.user, token: user.token, id: user.user._id };
         } else {
           // If no error and we have user data, return it
