@@ -11,15 +11,15 @@ import SliderContent from "./SliderContent";
 
 const backgroundList = [
   {
-    image: "gifts-background/Background-1.png",
+    image: "/gifts-background/Background-1.png",
     content: <SliderContent />,
   },
   {
-    image: "gifts-background/Background-1.png",
+    image: "/gifts-background/Background-1.png",
     content: <SliderContent />,
   },
   {
-    image: "gifts-background/Background-1.png",
+    image: "/gifts-background/Background-1.png",
     content: <SliderContent />,
   },
 ];

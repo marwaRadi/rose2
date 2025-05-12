@@ -9,6 +9,7 @@ function AboutImages() {
       <div className="self-center col-span-2 row-span-2">
         <div className="   relative  before:w-[70%] before:h-full  before:absolute before:top-0 before:left-0 before:z-[-1]  before:rounded-[100px] before:rounded-tl-[50px] before:border-2 before:border-primary-dark  aspect-square before:transform before:rotate-4 ">
           <Image
+            sizes="(max-width: 768px) 66vw, 33vw"
             fill
             className="object-cover py-4 pl-6  rounded-[100px] !rounded-tl-[50px] "
             src={aboutOne}
@@ -18,10 +19,22 @@ function AboutImages() {
       </div>
 
       <div className=" relative rounded-full self-end  overflow-hidden aspect-square ">
-        <Image fill className="object-cover " src={aboutTwo} alt="" />
+        <Image
+          fill
+          sizes="(max-width: 768px) 33vw, 16vw"
+          className="object-cover "
+          src={aboutTwo}
+          alt=""
+        />
       </div>
       <div className=" relative  overflow-hidden   rounded-[40px] rounded-r-[50%]  aspect-square">
-        <Image fill className="object-cover " src={aboutThree} alt="" />
+        <Image
+          fill
+          sizes="(max-width: 768px) 33vw, 16vw"
+          className="object-cover "
+          src={aboutThree}
+          alt=""
+        />
       </div>
     </div>
   );

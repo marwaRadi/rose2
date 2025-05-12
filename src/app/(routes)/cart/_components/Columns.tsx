@@ -28,6 +28,7 @@ export const columns: ColumnDef<Cart>[] = [
       const productImg = row.getValue("image") as string;
       return (
         <Image
+          sizes="100vw"
           src={productImg}
           alt="product image"
           width={50}

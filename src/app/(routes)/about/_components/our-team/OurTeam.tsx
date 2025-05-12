@@ -30,6 +30,7 @@ function OurTeam() {
               {/* photo */}
               <div className="relative md:aspect-square aspect-[3/2]">
                 <Image
+                  sizes="100vw"
                   fill
                   src={item.image}
                   alt="our team"

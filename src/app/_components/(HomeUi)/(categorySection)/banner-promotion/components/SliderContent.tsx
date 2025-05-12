@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 function SliderContent() {
   return (
-    <div className=" capitalize space-y-4 p-4 flex flex-col justify-center  h-full">
+    <div className=" capitalize space-y-4 p-4 flex flex-col justify-center absolute  h-full">
       <h4 className="text-base ">Best Gift Shop</h4>
       <h2 className="text-[clamp(1.5rem,2.5vw,2.5rem)]">
         Choose Perfect <br /> <span className="text-primary-dark">Gifts </span>

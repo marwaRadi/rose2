@@ -7,8 +7,9 @@ import promImageThree from "@/../public/gifts-background/Top view hand holding g
 import promImageFour from "@/../public/gifts-background/Christmas shopping-composition-with-presents-and-cart-main.png";
 function BannerPromotion() {
   return (
-    <div className=" grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 ">
+    <div className=" grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
       <PromotionImage
+        priority={true}
         img={promImageOne}
         textPosition="left"
         imageStyle="h-full "
@@ -24,7 +25,7 @@ function BannerPromotion() {
           <PrimaryBtn>shop now</PrimaryBtn>
         </>
       </PromotionImage>
-      <BannerSlider style="sm:col-span-2 sm:order-first md:order-0 " />
+      <BannerSlider style="sm:col-span-2 sm:order-first lg:order-0 " />
       <PromotionImage img={promImageTwo} imageStyle="h-full">
         <>
           <h5 className="text-base md:text-sm lg:text-base text-primary-dark font-medium">
@@ -42,14 +43,14 @@ function BannerPromotion() {
           <h5 className="text-base md:text-sm lg:text-base text-primary-dark font-medium">
             Occasion Gifts
           </h5>
-          <h2 className="text-xl md:text-base lg:text-xl">
+          <h1 className="text-xl md:text-base lg:text-xl">
             Best Occasion Gifts <br /> Collections
-          </h2>
+          </h1>
           <PrimaryBtn>Discover Now</PrimaryBtn>
         </>
       </PromotionImage>
 
-      <PromotionImage img={promImageFour} imageStyle="w-full h-full" >
+      <PromotionImage img={promImageFour} imageStyle="w-full h-full">
         <>
           <h5 className="text-base md:text-sm lg:text-base text-white font-medium">
             Occasion Gifts

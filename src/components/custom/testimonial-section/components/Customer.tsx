@@ -17,7 +17,13 @@ function Customer({ customerInfo }: CustomerProps) {
       {/* header */}
       <div className="flex gap-6">
         <div className="relative z-10 w-[50px] h-[50px] ">
-          <Image fill src={image} alt="avatar" className="rounded-full " />
+          <Image
+            fill
+            src={image}
+            sizes="50px"
+            alt="avatar"
+            className="rounded-full "
+          />
           <div className="rounded-full -rotate-45 w-[60px] h-[60px] z-[-1]  absolute -top-1 -left-1.5  overflow-hidden   after:absolute after:w-1/2  after:h-full after:bg-primary-dark   "></div>
         </div>
         <div>
@@ -37,6 +43,7 @@ function Customer({ customerInfo }: CustomerProps) {
               src={"/gifts-background/icons/feedback.svg"}
               width={86}
               height={62}
+              style={{height:"auto" ,width:"auto"}}
               alt="quote image"
             />
           </div>

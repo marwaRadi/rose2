@@ -8,7 +8,9 @@ type FilterButtonsProps = {
   params: SearchParams;
 };
 function FilterButton({ filterItems ,params }: FilterButtonsProps) {
-  const [activeItem, setActiveItem] = useState(params.params || 'all');
+  const [activeItem, setActiveItem] = useState<string | string[] | undefined>(
+    params.params || "all"
+  );
   const router = useRouter();
   const pathName = usePathname();
   function handleFilterItems(id: string) {

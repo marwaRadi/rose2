@@ -8,10 +8,11 @@ interface CategoryProps {
 
 function CategoryCard({ category }: CategoryProps) {
   return (
-  <Link href={`/category?categories=${category._id}`}>
-   <div className=" capitalize flex flex-col md:flex-row justify-center p-4 gap-4 rounded-[20px] bg-primary-light-90 items-center  ">
+    <Link href={`/category?categories=${category._id}`}>
+      <div className=" capitalize flex flex-col md:flex-row justify-center p-4 gap-4 rounded-[20px] bg-primary-light-90 items-center  ">
         <CircleBgIcon bg="bg-white" padding="p-3" border="border ">
           <Image
+            sizes="100vw"
             src={category.image}
             alt={category.name}
             width={50}
@@ -23,10 +24,7 @@ function CategoryCard({ category }: CategoryProps) {
           <p>{category.productsCount} items</p>
         </div>
       </div>
-  
-  </Link>
-     
-
+    </Link>
   );
 }
 

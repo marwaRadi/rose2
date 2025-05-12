@@ -30,6 +30,7 @@ function ProductCarousel({ product }: ProductCarouselProps) {
     <div className="xl:w-[80%] lg:ml-[15%] lg:w-3/4 grid ">
       <div className="relative aspect-square sm:aspect-[3/2] md:aspect-square xl:aspect-[3/2]   mb-3  rounded-[10px] overflow-hidden">
         <MotionImage
+          sizes="100vw"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           onDragEnd={(e, info) => {
@@ -52,7 +53,7 @@ function ProductCarousel({ product }: ProductCarouselProps) {
           className="object-cover  "
         />
         <button
-          className="absolute bg-primary-dark top-[10px] right-[10px] z-10 rounded-full ring-2 ring-white text-white  p-2 "
+          className="absolute bg-primary-dark top-[10px] right-[10px] rounded-full ring-2 z-5 ring-white text-white  p-2 "
           onClick={() => setIsPaused(!isPaused)}
         >
           {isPaused ? <Play /> : <Pause />}

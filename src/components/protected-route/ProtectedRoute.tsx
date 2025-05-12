@@ -42,7 +42,8 @@ function ProtectedRoute({ children }: ProtectedRouteProps) {
   if (status === "authenticated") return children;
  if(status === "unauthenticated") return (
     <div className="   flex flex-col gap-5 md:flex-row items-center justify-center">
-      <Image
+     <Image
+       
         src="/gifts-background/illustration/login/Login-amico.svg"
         alt=""
         height={300}

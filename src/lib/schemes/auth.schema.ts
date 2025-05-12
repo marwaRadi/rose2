@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { parsePhoneNumberFromString } from "libphonenumber-js";
 
 export
   const registerSchema = z
@@ -25,8 +24,9 @@ export
     rePassword: z.string({ required_error: "Re-password is requires" }),
     phone: z.string({ required_error: "phone is required" }).refine(
       (value) => {
-        const phone = parsePhoneNumberFromString(value);
-        return phone?.isValid() ?? false;
+        // const phone = parsePhoneNumberFromString(value);
+        const phone = /^\+\d{1,3}\d{7,12}$/.test(value);
+        return phone;
       },
       {
         message:

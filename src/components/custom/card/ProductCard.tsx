@@ -7,9 +7,10 @@ import { formatPrice } from "@/_utils/helper";
 
 type ProductCardProps = {
   product: Product;
+  priority?:boolean
 };
 
-function ProductCard({ product }: ProductCardProps) {
+function ProductCard({ product, priority }: ProductCardProps) {
   const { id, imgCover, title, priceAfterDiscount, price, rateAvg } = product;
   const productName = product.title.split("|")[0];
   return (
@@ -20,10 +21,11 @@ function ProductCard({ product }: ProductCardProps) {
           <div className="relative transition-all duration-300 aspect-square  sm:aspect-[4/3] group overflow-hidden main-rounded">
             <Image
               fill
-              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               src={imgCover}
               alt={title}
               className="object-cover"
+              priority={priority}
             />
             {/* overlay */}
             {/*       

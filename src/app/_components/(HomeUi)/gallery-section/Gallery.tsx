@@ -8,7 +8,7 @@ import giftFive from "@/../public/gifts-background/gallery/gift-5.png";
 function Gallery() {
   return (
     <section className="fixed-size">
-       {/* gallery */}
+      {/* gallery */}
       <div className=" my-20 px-4">
         {/* title */}
         <div className="w-fit md:text-center  md:mx-auto pb-6">
@@ -23,6 +23,7 @@ function Gallery() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <div className=" relative aspect-square  md:order-2">
             <Image
+              sizes="(min-width: 768px) 33vw, 100vw"
               fill
               src={giftOne}
               alt=""
@@ -31,6 +32,7 @@ function Gallery() {
           </div>
           <div className=" relative aspect-square md:order-1">
             <Image
+              sizes="(min-width: 768px) 33vw, 100vw"
               fill
               src={giftTwo}
               alt=""
@@ -39,6 +41,7 @@ function Gallery() {
           </div>
           <div className=" relative aspect-square md:order-first">
             <Image
+              sizes="(min-width: 768px) 33vw, 100vw"
               fill
               src={giftThree}
               alt=""
@@ -47,6 +50,7 @@ function Gallery() {
           </div>
           <div className=" relative aspect-square md:order-last">
             <Image
+              sizes="(min-width: 768px) 33vw, 100vw"
               fill
               src={giftFour}
               alt=""
@@ -63,6 +67,7 @@ function Gallery() {
           </div> */}
           <div className=" relative aspect-square md:order-3 md:col-span-2 md:aspect-auto">
             <Image
+              sizes="(min-width: 768px) 33vw, 100vw"
               fill
               src={giftFive}
               alt=""
@@ -71,8 +76,8 @@ function Gallery() {
           </div>
         </div>
       </div>
-      </section>
-  )
+    </section>
+  );
 }
 
 export default Gallery
