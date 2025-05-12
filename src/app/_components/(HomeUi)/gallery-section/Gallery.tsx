@@ -1,10 +1,10 @@
 
 import Image from "next/image";
-import giftOne from "@/../public/gifts-background/gallery/gift-1.jpg";
-import giftTwo from "@/../public/gifts-background/gallery/gift-2.png";
-import giftThree from "@/../public/gifts-background/gallery/gift-3.png";
-import giftFour from "@/../public/gifts-background/gallery/gift-4.png";
-import giftFive from "@/../public/gifts-background/gallery/gift-5.png";
+import giftOne from "@/../public/gifts-background/gallery/gift-1.webp";
+import giftTwo from "@/../public/gifts-background/gallery/gift-2.webp";
+import giftThree from "@/../public/gifts-background/gallery/gift-3.webp";
+import giftFour from "@/../public/gifts-background/gallery/gift-4.webp";
+import giftFive from "@/../public/gifts-background/gallery/gift-5.webp";
 function Gallery() {
   return (
     <section className="fixed-size">

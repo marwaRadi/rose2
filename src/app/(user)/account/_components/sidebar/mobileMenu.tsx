@@ -1,9 +1,16 @@
 "use client";
 import useDesktop from "@/app/(routes)/category/hooks/use-desktop";
 import ChevronIcon from "@/components/common/animation/ChevronIcon";
-import FadeIn from "@/components/common/animation/FadeIn";
+// import FadeIn from "@/components/common/animation/FadeIn";
 import { useState } from "react";
 import MenuList from "./MenuList";
+import dynamic from "next/dynamic";
+const MotionComponent = dynamic(
+  () => import("@/components/common/animation/FadeIn"),
+  {
+    ssr: false,
+  }
+);
 
 function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,11 +30,11 @@ function MobileMenu() {
         </button>
         {/* menu list */}
         {isOpen && (
-          <FadeIn
+          <MotionComponent
             styling={`fixed  left-0 top-39 right-0 bottom-0 z-10 bg-white px-4  `}
           >
             <MenuList setIsOpen={setIsOpen} />
-          </FadeIn>
+          </MotionComponent>
         )}
       </div>
       {/* menu btn */}

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import personOne from "@/../public/gifts-background/about-page/our-team/08b69e3557982a38b557393403fccb80da023221.jpg";
-import personTwo from "@/../public/gifts-background/about-page/our-team/39366ed9ea0773302268b31c098ba66236963035.jpg";
-import personThree from "@/../public/gifts-background/about-page/our-team/6d4b2d971811050e45e924793333a4428fe42379.jpg";
-import personFour from "@/../public/gifts-background/about-page/our-team/f4dd64b2cb5efc26436935408cf9f760376adac7.jpg";
+import personOne from "@/../public/gifts-background/about-page/our-team/08b69e3557982a38b557393403fccb80da023221.webp";
+import personTwo from "@/../public/gifts-background/about-page/our-team/39366ed9ea0773302268b31c098ba66236963035.webp";
+import personThree from "@/../public/gifts-background/about-page/our-team/6d4b2d971811050e45e924793333a4428fe42379.webp";
+import personFour from "@/../public/gifts-background/about-page/our-team/f4dd64b2cb5efc26436935408cf9f760376adac7.webp";
 import Link from "next/link";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import CircleBgIcon from "@/components/common/(circleBgIcon)/CircleBgIcon";

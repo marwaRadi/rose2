@@ -2,7 +2,7 @@
 import useDesktop from "@/app/(routes)/category/hooks/use-desktop";
 import MenuList from "./MenuList";
 import AccountHeaders from "../AccountHeaders";
-// import {motion} from "farmer-motion"
+
 // ====================================================
 //styles
 // const styleLi = ` px-4 py-2`;

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import aboutOne from "@/../public/gifts-background/about/ff4aa9a65b40f281876242848475b272.png";
-import aboutTwo from "@/../public/gifts-background/about/2b8854b043e2c2f1c278829231fcc17b.png";
-import aboutThree from "@/../public/gifts-background/about/33ad3b952fb247e440970b79fbb02f38.png";
+import aboutOne from "@/../public/gifts-background/about/ff4aa9a65b40f281876242848475b272.webp";
+import aboutTwo from "@/../public/gifts-background/about/2b8854b043e2c2f1c278829231fcc17b.webp";
+import aboutThree from "@/../public/gifts-background/about/33ad3b952fb247e440970b79fbb02f38.webp";
 
 function AboutImages() {
   return (

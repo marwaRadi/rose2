@@ -1,10 +1,11 @@
 import PrimaryBtn from "@/components/common/buttons/PrimaryBtn";
 import BannerSlider from "./components/BannerSlider";
 import PromotionImage from "./components/PromotionImage";
-import promImageTwo from "@/../public/gifts-background/confetti-lying-near-present1.jpg";
-import promImageOne from "@/../public/gifts-background/red-christmas-gifts-with-white-ribbon.jpg";
-import promImageThree from "@/../public/gifts-background/Top view hand holding gift box on work space.png";
-import promImageFour from "@/../public/gifts-background/Christmas shopping-composition-with-presents-and-cart-main.png";
+import promImageTwo from "@/../public/gifts-background/confetti-lying-near-present1.webp";
+import promImageOne from "@/../public/gifts-background/red-christmas-gifts-with-white-ribbon.webp";
+import promImageThree from "@/../public/gifts-background/Top-view-hand-holding-gift-box-on-work-space.webp";
+import promImageFour from "@/../public/gifts-background/Christmas-shopping-composition-with-presents-and-cart-main.webp";
+
 function BannerPromotion() {
   return (
     <div className=" grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
@@ -25,7 +26,10 @@ function BannerPromotion() {
           <PrimaryBtn>shop now</PrimaryBtn>
         </>
       </PromotionImage>
-      <BannerSlider style="sm:col-span-2 sm:order-first lg:order-0 " />
+
+        <BannerSlider style="sm:col-span-2 sm:order-first lg:order-0 " />
+
+
       <PromotionImage img={promImageTwo} imageStyle="h-full">
         <>
           <h5 className="text-base md:text-sm lg:text-base text-primary-dark font-medium">
