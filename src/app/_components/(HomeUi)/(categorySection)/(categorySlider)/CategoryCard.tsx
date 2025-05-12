@@ -11,13 +11,15 @@ function CategoryCard({ category }: CategoryProps) {
     <Link href={`/category?categories=${category._id}`}>
       <div className=" capitalize flex flex-col md:flex-row justify-center p-4 gap-4 rounded-[20px] bg-primary-light-90 items-center  ">
         <CircleBgIcon bg="bg-white" padding="p-3" border="border ">
-          <Image
-            sizes="100vw"
-            src={category.image}
-            alt={category.name}
-            width={50}
-            height={50}
-          />
+          <div className="relative h-[40px] w-[40px]">
+            <Image
+              sizes="40px"
+              fill
+              src={category.image}
+              alt={category.name}
+              className="object-contain"
+            />
+          </div>
         </CircleBgIcon>
         <div>
           <h3 className="">{category.name}</h3>
