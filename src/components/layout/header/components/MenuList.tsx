@@ -22,7 +22,11 @@ function MenuList() {
           }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          <Link className={`capitalize font-medium `} href={path.path}>
+          <Link
+            aria-label={path.name}
+            className={`capitalize font-medium `}
+            href={path.path}
+          >
             {path.name}
           </Link>
         </motion.li>

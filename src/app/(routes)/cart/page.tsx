@@ -18,33 +18,31 @@ export const metadata = getMetadata(
 );
 
 async function getData(): Promise<Cart[]> {
-
   const [payload, allCategories] = await Promise.all([
     getUserCart(),
     getAllCategories(),
   ]);
-
   const products = payload?.cart.cartItems;
+
+  console.log(products);
   // determine product list
   const userCart = products?.map((product) => {
     const categoryName = allCategories?.filter(
-      (c) => c._id === product.product.category
+      (c) => c._id === product?.product?.category
     )[0]?.name;
-
     return {
-      price: product.price,
-      priceAfterDiscount: product.product.priceAfterDiscount,
-      quantity: product.quantity,
-      id: product.product._id,
-      image: product.product.imgCover,
+      price: product?.price || 0,
+      priceAfterDiscount: product?.product?.priceAfterDiscount || 0,
+      quantity: product?.quantity || 0,
+      id: product?.product?._id || "",
+      image: product?.product?.imgCover || "",
       productName: {
-        title: product.product.title,
-        category: categoryName,
+        title: product?.product?.title || "",
+        category: categoryName || "",
       },
-      total: product.product.priceAfterDiscount * product.quantity || 0,
+      total: product?.product?.priceAfterDiscount * product?.quantity || 0,
     };
   });
-
   // Fetch data from your API here.
   return userCart || [];
 }
@@ -53,6 +51,7 @@ async function getData(): Promise<Cart[]> {
 //=====================================================================
 async function page() {
   const data = await getData();
+  console.log("cart page", data);
   return (
     <div className="fixed-size">
       <ProtectedRoute>
@@ -67,7 +66,7 @@ async function page() {
               {/*cart Actions  */}
 
               <div className=" flex justify-evenly mt-10">
-                <Link href={"/category"}>
+                <Link href={"/category"} aria-label="category">
                   <PrimaryBtn>
                     <div className="flex items-center">
                       <ArrowLeft className="inline-block mr-1" />
@@ -88,6 +87,7 @@ async function page() {
       </ProtectedRoute>
     </div>
   );
+
 }
 
 export default page;

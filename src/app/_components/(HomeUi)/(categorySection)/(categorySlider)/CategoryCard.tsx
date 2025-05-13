@@ -8,7 +8,7 @@ interface CategoryProps {
 
 function CategoryCard({ category }: CategoryProps) {
   return (
-    <Link href={`/category?categories=${category._id}`}>
+    <Link aria-label="specific category" href={`/category?categories=${category._id}`}>
       <div className=" capitalize flex flex-col md:flex-row justify-center p-4 gap-4 rounded-[20px] bg-primary-light-90 items-center  ">
         <CircleBgIcon bg="bg-white" padding="p-3" border="border ">
           <div className="relative h-[40px] w-[40px]">

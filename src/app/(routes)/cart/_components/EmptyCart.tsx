@@ -21,7 +21,11 @@ function EmptyCart() {
           Your cart is currently empty. Start exploring our collections and add
           your favorite items. Great gifts are just a click away!
         </p>
-        <Link href={"/category"} className="mt-5 inline-block">
+        <Link
+          href={"/category"}
+          className="mt-5 inline-block"
+          aria-label="continue shopping"
+        >
           <PrimaryBtn>show now</PrimaryBtn>
         </Link>
       </div>

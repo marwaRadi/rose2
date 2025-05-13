@@ -9,7 +9,20 @@ export async function getAllProducts() {
   if (!res.ok) throw new Error("Products not found");
   const payload: APIResponse<BaseItem<Product[]>> = await res.json();
 
-  if ("products" in payload && payload.message === "success") return payload;
+  if ("products" in payload && payload.message === "success") {
+    // const validData = payload.products.filter(product => product.quantity > 0)
+    return {
+      message: payload.message,
+      products: payload.products,
+      error: null,
+      metadata: {
+        currentPage: payload.currentPage,
+        totalPages: payload.totalPages,
+        limit: payload.limit,
+        totalItems: payload.totalItems,
+      },
+    };
+  };
   throw new Error(payload.message);
 }
 
@@ -63,3 +76,4 @@ export async function getUserCart() {
   if ("error" in payload || payload.message !== "success")
     throw new Error(payload.message);
 }
+//==============================================

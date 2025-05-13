@@ -37,7 +37,7 @@ function InstagramSection() {
             <Image src={img} alt="gift" className="aspect-square" />
             <div className="absolute inset-0 bg-black/40 flex justify-center items-center group-hover:translate-y-0 translate-y-full duration-300 transition-transform ease-in-out">
               <CircleBgIcon padding="p-2">
-                <Link href="#">
+                <Link href="#" aria-label="instagram icon">
                   <Instagram />
                 </Link>
               </CircleBgIcon>

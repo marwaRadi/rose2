@@ -11,35 +11,25 @@ type ProductCardProps = {
 };
 
 function ProductCard({ product, priority }: ProductCardProps) {
-  const { id, imgCover, title, priceAfterDiscount, price, rateAvg } = product;
+  const { id, imgCover, title, priceAfterDiscount, price, rateAvg, quantity } =
+    product;
   const productName = product.title.split("|")[0];
+  const isValid = quantity > 0;
+  //==========================================================================
   return (
     <RevealOnScroll>
-      <div className=" space-y-2 ">
+      <div className={`space-y-2 ${isValid ? "" : "grayscale"}`}>
         {/* product image */}
-        <Link href={`/category/${id}`}>
+        <Link aria-label="product" href={`/category/${id}`}>
           <div className="relative transition-all duration-300 aspect-square  sm:aspect-[4/3] group overflow-hidden main-rounded">
             <Image
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               src={imgCover}
               alt={title}
-              className="object-cover"
+              className={`object-cover `}
               priority={priority}
             />
-            {/* overlay */}
-            {/*       
-          <div className="group-hover:translate-y-0 group-focus:translate-y-0 group-focus:opacity-100  opacity-0 hover:opacity-100 duration-300 transition-colors translate-y-full w-full h-full absolute top-o left-0 transform  bg-primary-light-40/50   transition-transform ease-in-out flex justify-center items-center gap-4">
-            <Link href={`/category/${id}`}>
-              <CircleBgIcon padding="p-1">
-                <EyeIcon />
-              </CircleBgIcon>
-            </Link>
-
-            <CircleBgIcon padding="p-1">
-              <Heart />
-            </CircleBgIcon>
-          </div> */}
           </div>
         </Link>
 
@@ -65,7 +55,12 @@ function ProductCard({ product, priority }: ProductCardProps) {
             </div>
             {/* cart */}
             <div className="flex">
-              <AddToCartBtn type="circle" id={id} key={id} />
+              <AddToCartBtn
+                type="circle"
+                id={id}
+                key={id}
+                isQuantityValid={isValid}
+              />
             </div>
           </div>
         </div>

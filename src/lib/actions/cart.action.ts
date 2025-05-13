@@ -7,11 +7,12 @@ type AddToCartProps = {
   id: string;
   quantity: number;
 };
+//======================================== add to cart ==================================================
 export async function addToCart({ id, quantity }: AddToCartProps) {
+  console.log("from cart ❌", id, quantity);
   //==================================================================
   // get token
   const token = await getServerUserToken();
-  // const token = (await cookies()).get("e-commerce-token")?.value;
 
   //==================================================================
   // fetch data
@@ -26,13 +27,14 @@ export async function addToCart({ id, quantity }: AddToCartProps) {
   const payload: APIResponse<CartBase<Cart<CartItems<Product>>>> =
     await res.json();
   if (!res.ok) throw new Error(res.statusText);
-  console.log("payload from action", payload);
+  // console.log("payload from action", payload);
   if ("cart" in payload && payload.message === "success") {
     revalidateTag("getCart");
     return payload;
   }
   if ("error" in payload || payload.message !== "success")
-    throw new Error(payload.message);
+    return{error :payload.message || payload.error}
+    // throw new Error(payload.message);
 }
 
 //============================================== delete from cart =================================================

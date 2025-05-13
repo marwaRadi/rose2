@@ -47,28 +47,28 @@ function OurTeam() {
               <div>
                 <ul className="flex justify-between items-center  mt-4">
                   <li>
-                    <Link href="#">
+                    <Link aria-label="facebook icon" href="#">
                       <CircleBgIcon padding="p-2">
                         <Facebook />
                       </CircleBgIcon>
                     </Link>
                   </li>
                   <li>
-                    <Link href="#">
+                    <Link href="#" aria-label=" go to instagram ">
                       <CircleBgIcon padding="p-2">
                         <Instagram />
                       </CircleBgIcon>
                     </Link>
                   </li>
                   <li>
-                    <Link href="#">
+                    <Link href="#" aria-label="X">
                       <CircleBgIcon padding="p-2">
                         <Twitter />
                       </CircleBgIcon>{" "}
                     </Link>
                   </li>
                   <li>
-                    <Link href="#">
+                    <Link href="#" aria-label="youtube">
                       <CircleBgIcon padding="p-2">
                         <Youtube />
                       </CircleBgIcon>{" "}

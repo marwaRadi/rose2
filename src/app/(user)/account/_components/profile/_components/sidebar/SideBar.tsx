@@ -1,7 +1,6 @@
 "use client";
 import useDesktop from "@/app/(routes)/category/hooks/use-desktop";
 import MenuList from "./MenuList";
-import AccountHeaders from "../AccountHeaders";
 
 // ====================================================
 //styles
@@ -17,7 +16,8 @@ function SideBar() {
       {isDesktop && (
         <aside className="  border-r-2  border-gray-200/40 h-full  ">
           {/* header */}
-          <AccountHeaders title="menu" />
+          {/* <AccountHeaders title="menu" /> */}
+          <h4>menu</h4>
           {/* menu list */}
           <MenuList />
         </aside>

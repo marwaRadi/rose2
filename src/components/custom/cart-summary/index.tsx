@@ -40,13 +40,12 @@ async function CartSummary() {
           </p>
         </li>
       </ul>
-      <Link href="/checkout" className="">
+      <Link aria-label="checkout" href="/checkout" className="">
         <PrimaryBtn style="w-full ">
           <div className="flex items-center justify-center gap-1">
             <CreditCard className="inline-block" />
-          check out
+            check out
           </div>
-          
         </PrimaryBtn>
       </Link>
     </div>

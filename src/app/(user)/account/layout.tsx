@@ -1,7 +1,7 @@
 import ProtectedRoute from "@/components/protected-route/ProtectedRoute";
 
-import SideBar from "./_components/sidebar/SideBar";
-import MobileMenu from "./_components/sidebar/mobileMenu";
+import SideBar from "./_components/profile/_components/sidebar/SideBar";
+import MobileMenu from "./_components/profile/_components/sidebar/mobileMenu";
 // ====================================================
 
 // ====================================================

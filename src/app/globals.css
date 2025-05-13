@@ -30,7 +30,7 @@
   --color-primary-light-30:#e677a6;
   --color-primary-light-20:#e26499;
   --color-primary-light-10:#df508d;
-  --color-primary-dark:#DB3D80;
+  --color-primary-dark:#D93077;
   --color-primary-dark-10 :#c53773;
   --color-primary-dark-20 :#af3166;
   --color-primary-dark-30 :#992b5a;
@@ -61,7 +61,7 @@
   --color-secondary-dark-80 :#1c1033; 
 --color-accent-one:#E5E5E5;
 --color-heading:#222222;
-  --color-muted-text:#888888;
+  --color-muted-text:#757575;
   --color-custom :#E0E0E0;
 
   /* --color-primary-light:#FB66C1;
@@ -103,6 +103,7 @@ h1 , h2 , h3 , h4 , h5 , h6 {
 font-family: var(--headingFont);
 font-weight: 700;
 text-transform: capitalize;
+
 };
 p{
 font-family: var(--textFont);
@@ -122,6 +123,7 @@ p{
 };
 button{
   cursor: pointer;
+  
 }
  }
 

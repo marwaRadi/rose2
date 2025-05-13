@@ -33,7 +33,7 @@ function CartBadge() {
   }, [data, getCurrentCartProductsCallback]);
 
   return (
-    <Link href="/cart">
+    <Link aria-label="cart" href="/cart">
       <div className={` relative `}>
         { cartCount > 0 && (
           <div className="absolute -top-3 -right-3  bg-primary-dark w-5 h-5 rounded-full flex justify-center items-center ">

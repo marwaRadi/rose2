@@ -49,7 +49,7 @@ async function ProductContent({ product }: ProductContent) {
           <Counter />
         </div>
         {/* product info */}
-        <ul >
+        <ul>
           <li>
             <p>
               stock:{" "}
@@ -63,7 +63,7 @@ async function ProductContent({ product }: ProductContent) {
           </li>
         </ul>
         <div className="flex items-center gap-3">
-          <AddToCartBtn id={id} type="regular" />
+          <AddToCartBtn id={id} type="regular" isQuantityValid={quantity > 0} />
           <CircleBgIcon padding="p-2">
             <Heart />
           </CircleBgIcon>

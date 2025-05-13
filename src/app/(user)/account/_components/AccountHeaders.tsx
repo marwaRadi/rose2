@@ -1,5 +1,5 @@
 function AccountHeaders({ title }: { title: string }) {
-  return <h4>{title}</h4>;
+  return <h2>{title}</h2>;
 }
 
 export default AccountHeaders;

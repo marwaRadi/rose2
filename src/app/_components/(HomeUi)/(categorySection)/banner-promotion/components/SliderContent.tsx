@@ -13,12 +13,11 @@ function SliderContent() {
         Culpa ducimus nesciunt aliquam non rerum esse recusandae omnis. Rerum
         optio dolores et.
       </p>
-      <Link href="/category">
-          <PrimaryBtn>
-        Shop Now <ArrowRight className="inline-block" />
-      </PrimaryBtn>
+      <Link aria-label="category" href="/category">
+        <PrimaryBtn>
+          Shop Now <ArrowRight className="inline-block" />
+        </PrimaryBtn>
       </Link>
-    
     </div>
   );
 }

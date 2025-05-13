@@ -15,10 +15,15 @@ import { ErrorToast } from "@/lib/utils/ErrorToast";
 type AddToCartProps = {
   id: string;
   type?: "circle" | "regular";
+  isQuantityValid: boolean;
 };
 //======================================================
 
-function AddToCartBtn({ id, type = "circle" }: AddToCartProps) {
+function AddToCartBtn({
+  id,
+  type = "circle",
+  isQuantityValid,
+}: AddToCartProps) {
   //======================================================
   //hooks
   // const [openModel, setOpenModel] = useState<string>("");
@@ -28,6 +33,7 @@ function AddToCartBtn({ id, type = "circle" }: AddToCartProps) {
   const { data: session } = useSession();
   const route = useRouter();
   const pathName = usePathname();
+
   //======================================================
   //functions
   async function handleClick() {
@@ -38,29 +44,35 @@ function AddToCartBtn({ id, type = "circle" }: AddToCartProps) {
         scroll: false,
       });
     } else {
+      if (!isQuantityValid) return;
+
       setIsPending(true);
       const payload = await addToCart({ id, quantity: count });
       if (payload && "message" in payload && payload?.message === "success") {
         getCurrentCartProducts(payload.numOfCartItems);
-        console.log(payload)
         setIsPending(false);
         successToast("Added to cart successfully");
-      } else {
+      }
+      if ((payload && "error" in payload) || payload?.message !== "success") {
         setIsPending(false);
         ErrorToast("failed to add to cart");
       }
+      // } else {
+      // setIsPending(false);
+      // ErrorToast("failed to add to cart");
+      // }
     }
-
     // startTransition(async () => await addToCart({ id, quantity: count }));
   }
   //======================================================
   //render
   return (
     <motion.button
-      disabled={isPending}
+      disabled={isPending || !isQuantityValid}
       whileTap={{ scale: 0.9 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className={`cursor-pointer mr-1
+        ${isQuantityValid ? "" : "cursor-not-allowed bg-secondary-dark/50"}
          ${
            type === "circle"
              ? `w-10 h-10 p-2

@@ -1,12 +1,13 @@
-import { products } from "@/app/temporary-data/all-products/products";
 import ProductCard from "@/components/custom/card/ProductCard";
+import { getAllProducts } from "@/lib/api/data-service.api";
 
-const popularProducts = products.filter((product) => product.rateAvg >= 4);
-function PopularProducts({
-  params,
-}: {
-  params: SearchParams;
-}) {
+// const popularProducts = products.filter((product) => product.rateAvg >= 4);
+async function PopularProducts({ params }: { params: SearchParams }) {
+  const payload = await getAllProducts();
+  const popularProducts = payload?.products?.filter(
+    (product) => product.rateAvg >= 4
+  );
+
   let products;
 
   if (params.category === "all" || !params.category) {

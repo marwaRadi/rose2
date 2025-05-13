@@ -22,7 +22,9 @@ function FooterLinks() {
     <ul className=" capitalize flex font-bold  items-center text-center p-2 ">
       {Links.map((link) => (
         <li className="w-1/4" key={link.name}>
-          <Link href={link.path}>{link.name}</Link>
+          <Link aria-label={link.name} href={link.path}>
+            {link.name}
+          </Link>
         </li>
       ))}
     </ul>

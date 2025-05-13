@@ -5,7 +5,7 @@ async function HeaderIcons() {
 
   return (
     <div className="grow md:grow-0 flex justify-end text-primary-dark gap-5 pr-2">
-      <Link href="/">
+      <Link aria-label="home" href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -22,7 +22,7 @@ async function HeaderIcons() {
         </svg>
       </Link>
 
-      <Link href="/favorite">
+      <Link aria-label="favorite" href="/favorite">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -41,7 +41,7 @@ async function HeaderIcons() {
 
       {/* cart badge  */}
       <CartBadge />
-      <Link href={"/account"}>
+      <Link aria-label="account" href={"/account"}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
